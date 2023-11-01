@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RolesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,7 @@ Route::get('/dashboard',[AuthController::class,'dashboard'])->name('dashboard');
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::get('/profile',[AuthController::class,'profile'])->name('profile');
 Route::post('/profileupdate',[AuthController::class,'profileupdate'])->name('profileupdate');
+Route::get('/roles',[RolesController::class,'index'])->name('rolesindex');
 
 
 
